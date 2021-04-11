@@ -1,0 +1,193 @@
+main {
+	max-width: 1000px;
+	margin: 120px auto 60px;
+	padding: 30px 20px;
+	background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 0 17px 9px whitesmoke;
+
+        h1 {
+        margin-bottom: 50px;
+        color: #7aca25;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: normal;
+
+                &::first-letter {
+                    color: $orange;
+                }
+        }
+
+    .loader {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 25px 0;
+
+        & img {
+            display: block;
+            height: 60px;
+            width: 60px;
+        }
+    }
+
+    #food-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input, select {
+            width: 100%;
+            max-width: 600px;
+            height: 44px;
+            margin-bottom: 30px;
+            padding: 5px 10px;
+            color: $gray;
+            font-size: 16px;
+            -webkit-appearance: none;
+            border: solid 1px #ccc;
+            border-radius: 0;
+        }
+
+        select {
+            background-image: url('../img/arrow.png');
+            background-size: 13px;
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+        }
+
+        button {
+            padding: 10px 25px;
+            background-color: $orange;
+            border: none;
+            text-transform: uppercase;
+            font-size: 18px;
+            color: $white;
+            cursor: pointer;
+            transition: all .3s ease;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+
+            &:hover {
+                opacity: .8;
+            }
+
+            &:disabled {
+                opacity: .5;
+                cursor: default;
+            }
+        }
+
+        #conteinerCalories {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 600px;
+
+            input {
+                width: 30%;
+            }
+        }
+    }
+
+    #recipes {
+        display: flex;
+        flex-wrap: wrap;
+
+        .recipe-element {
+            position: relative;
+            width: 22%;
+            margin-right: 4%;
+            margin-bottom: 20px;
+
+            h3 {
+                font-size: 15px;
+            }
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+
+            img {
+                display: block;
+                max-width: 100%;
+                clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+                border: 2px solid orangered;
+            }
+
+            .calories {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 10px;
+                right: 10px;
+                background: rgb(122, 202, 37);
+                color: $white;
+                width: 50px;
+                height: 50px;
+                font-size: 12px;
+                clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            }
+
+            .labels {
+                display: flex;
+                flex-wrap: wrap;
+
+                .label {
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+                    padding: 2px 5px;
+                    background: $white;
+                    color: $orange;
+                    border-radius: 4px;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    .pag {
+        .butt {
+            display: none;
+            margin: 10px auto;
+            outline: none;
+            border-color: $white;
+            border-radius: 20px;
+            cursor: pointer;
+
+            #arrow_up {
+                padding: 10px;
+                transform: rotate(180deg);
+            }
+
+            #arrow_down {
+                padding: 10px;
+            }
+        }
+
+        .conteiner_pagination {
+            border-style: inset;
+            box-sizing: content-box;
+            padding: 5px;
+            background-color: #f0f8ff;
+            width: 175px;
+            margin: auto;
+            text-align: center;
+            overflow: hidden;
+            max-height: 21px;
+
+            .pages {
+                width: 18%;
+                position: relative;
+                margin-right: 4px;
+                margin-bottom: 6px;
+                padding: 2px;
+                cursor: pointer;
+
+                &:nth-child(5n) {
+                    margin: 0px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,82 @@
+@media all and (max-width: 1045px) {
+    main {
+        max-width: 900px;
+    }
+
+    header .wrapper {
+            padding: 0 10px;
+        }
+}
+
+@media all and (max-width: 950px) {
+    main {
+        max-width: 800px;
+    }
+}
+
+@media all and (max-width: 850px) {
+    main #food-form input, main #food-form select {
+       width: 80%;
+    }
+
+    main #food-form #conteinerCalories input {
+        width: 25%;
+    }
+
+    main {
+        width: 80%;
+    }
+
+    main #recipes .recipe-element {
+        width: 30%;
+        margin-right: 5%;
+
+        &:nth-child(3n) {
+            margin-right: 0%;
+            }
+
+        &:nth-child(4n) {
+            margin-right: 5%;
+            }
+    }
+}
+
+@media all and (max-width: 777px) {
+    #conteinerCalories {
+        flex-direction: column;
+        align-items: center;
+    }
+        main #food-form #conteinerCalories input {
+        width: 40%;
+    }
+}
+
+@media all and (max-width: 710px) {
+    main #recipes .recipe-element {
+        width: 48%;
+        margin-right: 4%;
+    }
+    main #recipes .recipe-element:nth-child(3n) {
+        margin-right: 4%;
+    }
+    main #recipes .recipe-element:nth-child(2n) {
+        margin-right: 0%;
+    }
+}
+
+@media all and (max-width: 625px) {
+    main #recipes .recipe-element {
+        width: 100%;
+        margin-right: 0%;
+        padding: 0px 20px;
+        margin-bottom: 50px;
+
+         img {
+            width: 100%;
+        }
+    }
+
+    main #recipes .recipe-element .calories {
+        right: 145px;
+    }
+}

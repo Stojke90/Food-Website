@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Food website</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+        <header>
+        	<div class="wrapper">
+        	    <a id="logo" href="#">iFood</a>
+        	    <section class="recipe-count">
+    	    		<span class="recipe-count-number">0</span>
+    	    	    <span class="recipe-count-label">results</span>
+        	    </section>
+        	</div>
+        </header>
+        <main>
+        	<h1>Search recipe</h1>
+        	<section id="food-form">
+        		<input class="keyword-input" id="searchInput" type="text" name="q" placeholder="Keyword" />
+        		<select name="health" id="health">
+        			<option value="" disabled selected>HEALTH</option>
+                    <option value="alcohol-free">Alcohol free</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="peanut-free">Peanuts</option>
+        		</select>
+                <select name="diet" id="diet">
+                    <option value="" disabled selected>DIET</option>
+                    <option value="balanced">Balanced</option>
+                    <option value="high-protein">High-Protein</option>
+                    <option value="low-carb">Low-Carb</option>
+                    <option value="low-fat">Low-Fat</option>
+                </select>
+                <div id="conteinerCalories">
+                    <input class="calories" type="text" name="calorieMin" placeholder="CALORIES MIN" />
+                    <input class="calories" type="text" name="calorieMax" placeholder="CALORIES MAX" />
+                </div>
+        		<button class="search-button" id="btnSubmit" disabled="disabled">Search</button>
+        	</section>
+        	<div class="loader"></div>
+        	<section id="recipes"></section>
+
+            <div class="pag">
+                <button class="butt"><img id="arrow_up"></button>
+                <div id="conteiner_pagination"></div>
+                <button class="butt"><img id="arrow_down"></button>
+            </div>
+            
+        </main>
+
+        <script src="js/main.js" type="module"></script>
+	</body>
+</html>
